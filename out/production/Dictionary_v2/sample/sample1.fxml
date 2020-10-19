@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerGraphic1">
+   <children>
+      <TabPane layoutX="-1.0" prefHeight="550.0" prefWidth="630.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="      Search      ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" onMouseClicked="#hideHistory" prefHeight="550.0" prefWidth="630.0">
+                     <children>
+                        <ListView fx:id="moveListG" layoutX="110.0" layoutY="197.0" onMouseClicked="#lookByHistory" prefHeight="285.0" prefWidth="351.0" style="-fx-background-color: #f4f4f4;" />
+                        <Button layoutX="472.0" layoutY="156.0" mnemonicParsing="false" onAction="#lookWord2" prefHeight="33.0" prefWidth="83.0" text="Search">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="122.0" layoutY="77.0" text="D" textFill="#2200ff">
+                           <font>
+                              <Font name="System Bold" size="60.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="166.0" layoutY="68.0" text="I" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="60.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="186.0" layoutY="68.0" text="C" textFill="YELLOW">
+                           <font>
+                              <Font name="System Bold" size="60.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="230.0" layoutY="77.0" text="T" textFill="BLUE">
+                           <font>
+                              <Font name="System Bold" size="60.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="275.0" layoutY="68.0" text="I" textFill="GREEN">
+                           <font>
+                              <Font name="System Bold" size="60.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="295.0" layoutY="68.0" text="O" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="60.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="341.0" layoutY="77.0" text="N" textFill="#ff00ae">
+                           <font>
+                              <Font name="System Bold" size="60.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="389.0" layoutY="68.0" text="A" textFill="#ff8800">
+                           <font>
+                              <Font name="System Bold" size="60.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="432.0" layoutY="77.0" text="R">
+                           <font>
+                              <Font name="System Bold" size="60.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="472.0" layoutY="77.0" text="Y" textFill="#27bad3">
+                           <font>
+                              <Font name="System Bold" size="60.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="searchG" layoutX="107.0" layoutY="156.0" onKeyPressed="#lookWord1" onKeyReleased="#searchWord" onMouseClicked="#printHistory" prefHeight="33.0" prefWidth="356.0" promptText="Enter the search word" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="      Edit      ">
+               <content>
+                  <AnchorPane prefHeight="550.0" prefWidth="630.0">
+                     <children>
+                        <ListView fx:id="moveListR" layoutY="44.0" onKeyPressed="#deleteWordKey" onMouseClicked="#showWordToRepair" prefHeight="478.0" prefWidth="238.0" />
+                        <Button layoutX="416.0" layoutY="330.0" mnemonicParsing="false" onMouseClicked="#addWordToList" prefHeight="25.0" prefWidth="103.0" text="+ Add Word" />
+                        <Button layoutX="416.0" layoutY="375.0" mnemonicParsing="false" onMouseClicked="#deleteWordInList" prefHeight="25.0" prefWidth="103.0" text="- Delete Word" />
+                        <Button layoutX="416.0" layoutY="418.0" mnemonicParsing="false" onMouseClicked="#repairWordInList" prefHeight="25.0" prefWidth="103.0" text="Repair Word" />
+                        <TextField fx:id="targetR" layoutX="343.0" layoutY="66.0" prefHeight="33.0" prefWidth="258.0" />
+                        <TextArea fx:id="explainR" layoutX="345.0" layoutY="122.0" prefHeight="152.0" prefWidth="256.0" />
+                        <Label layoutX="271.0" layoutY="69.0" text="Target">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="268.0" layoutY="122.0" text="Explain">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="searchR" layoutX="3.0" layoutY="5.0" onKeyReleased="#searchWord2" prefHeight="34.0" prefWidth="235.0" promptText="Enter the search word" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="    Translate    ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="477.0" prefWidth="607.0">
+                     <children>
+                        <TextField fx:id="targetTranslate" alignment="TOP_LEFT" layoutX="43.0" layoutY="65.0" onKeyPressed="#enterToTranslate" prefHeight="130.0" prefWidth="240.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextField>
+                        <Button layoutX="257.0" layoutY="249.0" mnemonicParsing="false" onMouseClicked="#GGTranslate" prefHeight="44.0" prefWidth="116.0" text="Dịch" />
+                        <TextArea fx:id="explainTranslate" layoutX="338.0" layoutY="64.0" prefHeight="131.0" prefWidth="234.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextArea>
+                        <Label layoutX="66.0" layoutY="29.0" prefHeight="24.0" prefWidth="120.0" text="ENGLISH">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="373.0" layoutY="30.0" prefHeight="23.0" prefWidth="90.0" text="VIETNAMESE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="137.0" layoutY="29.0" mnemonicParsing="false" onMouseClicked="#speak" text="speak" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

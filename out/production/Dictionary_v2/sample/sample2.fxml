@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerGraphic2">
+   <children>
+      <WebView fx:id="webView" prefHeight="557.0" prefWidth="630.0" />
+      <Button layoutX="456.0" layoutY="37.0" mnemonicParsing="false" onMouseClicked="#buttonVoice" prefHeight="39.0" prefWidth="85.0" text="Speak">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="456.0" layoutY="471.0" mnemonicParsing="false" onMouseClicked="#changeScreen2" text="       Cancel       ">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
